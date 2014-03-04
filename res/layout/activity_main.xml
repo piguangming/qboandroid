@@ -1,0 +1,361 @@
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  xmlns:qbo="http://schemas.android.com/apk/res/com.jd.qbo"
+  tools:context=".MainActivity"
+  >
+     <!-- 状态区 -->
+   <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="200dp">
+       <!-- 状态区->状态信息 -->
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="40dp">
+          <!-- 状态区->状态信息->第一列(连接状态) --> 
+          <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" >
+			       <TextView
+			        android:id="@+id/textview_connection_status"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="@string/connection_status_no"/>
+	       </LinearLayout>
+	      <!-- 状态区->状态信息->第二列(x位移, y位移, 角度) ，由于调试尚未稳定，暂时注释此项参数--> 
+	      <!-- 
+	      <LinearLayout android:orientation="vertical" android:layout_width="80dp" android:layout_height="wrap_content">
+	          
+	          <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" >
+	          <TextView
+	        android:id="@+id/label_position_status_x"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:text="@string/position_status_x"/>
+	          <TextView
+	        android:id="@+id/textview_position_status_x"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:text="@string/initial_zero"/>
+	          </LinearLayout>
+	          
+	          <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" >
+	          <TextView
+	        android:id="@+id/textview_position_status_y"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:text="@string/position_status_y"/>
+	          <TextView
+	        android:id="@+id/label_position_status_y"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:text="@string/initial_zero"/>
+	          </LinearLayout>
+	           
+	          <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" >
+	          <TextView
+	        android:id="@+id/label_position_status_angle"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:text="@string/position_status_angle"/>
+	          <TextView
+	        android:id="@+id/textview_position_status_angle"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:text="@string/initial_zero"/>
+	          </LinearLayout>
+	      </LinearLayout>
+	      -->
+	      <!-- 状态区->状态信息->第三列(实时角速度, 实时线速度) ，由于调试尚未稳定，暂时注释此项参数-->
+	      <!-- 
+	      <LinearLayout android:orientation="vertical" android:layout_width="120dp" android:layout_height="wrap_content">
+	          <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" >
+	          <TextView
+	        android:id="@+id/label_position_realtime_angular_velocity"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:text="@string/position_realtime_angular_velocity"/>
+	          <TextView
+	        android:id="@+id/textview_position_realtime_angular_velocity"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:text="@string/initial_zero"/>
+	          </LinearLayout>
+	          <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" >
+	          <TextView
+	        android:id="@+id/label_position_realtime_linear_velocity"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:text="@string/position_realtime_linear_velocity"/>
+	          <TextView
+	        android:id="@+id/textview_position_realtime_linear_velocity"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:text="@string/initial_zero"/>
+	          </LinearLayout>
+	      </LinearLayout>
+	       -->
+	      <!-- 状态区->状态信息->第四列(转弯角度, 障碍物距离) ，由于调试尚未稳定，暂时注释此项参数-->
+	      <!--
+	      <LinearLayout android:orientation="vertical" android:layout_width="120dp" android:layout_height="wrap_content">
+	          <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" >
+	          <TextView
+	        android:id="@+id/label_amount_of_turn"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:text="@string/amount_of_turn"/>
+	          <TextView
+	        android:id="@+id/textview_amount_of_turn"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:text="@string/initial_zero"/>
+	          </LinearLayout>
+	          <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" >
+	          <TextView
+	        android:id="@+id/label_distance_of_obstacle"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:text="@string/distance_of_obstacle"/>
+	          <TextView
+	        android:id="@+id/textview_distance_of_obstacle"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:text="@string/initial_zero"/>
+	           </LinearLayout>
+	           -->
+	           <!-- 
+	           <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" >
+	          <TextView
+	        android:id="@+id/label_counter"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:text="@string/counter"/>
+	          <TextView
+	        android:id="@+id/textview_counter"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:text="@string/initial_zero"/>
+	           </LinearLayout>
+	            
+	      </LinearLayout>
+	      -->
+        </LinearLayout>
+        
+        <!-- 状态区 -> 日志信息（数据发送与接收） -->
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="180dp">
+	       <TextView
+	        android:id="@+id/textview_workarea_status"
+	        android:layout_width="fill_parent"
+	        android:layout_height="20dp"
+	        android:layout_marginTop="16dp"
+	        android:text="@string/log_info_of_sensor" />
+	       <TextView
+	        android:id="@+id/textview_sent_data"
+	        android:layout_width="fill_parent"
+	        android:layout_height="20dp"
+	        android:text="@string/send_data"/>
+	       <TextView
+	        android:id="@+id/textview_receive_data"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:text="@string/receive_data"/>
+       </LinearLayout>
+        
+   </LinearLayout>
+   
+   <!-- 控制区 -->
+   <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="700dp">
+       <!-- 控制区 -> 设置 -->
+       <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="70dp">
+           <!-- 控制区 -> 设置 -> 第1列 连接按钮 -->
+           <Button
+               android:id="@+id/bt_conn"
+		       android:layout_width="wrap_content"
+		       android:layout_height="wrap_content"
+		       android:layout_marginTop="8dp"
+		       android:text="@string/bt_conn" /> 
+		    <!-- 控制区 -> 设置 -> 第2列 断开按钮 -->
+		   <Button
+               android:id="@+id/bt_disconn"
+		       android:layout_width="wrap_content"
+		       android:layout_height="wrap_content"
+		       android:layout_marginTop="8dp"
+		       android:text="@string/bt_disconn" /> 
+           <!-- 控制区 -> 设置 -> 第3列 运动模式下拉框 -->
+           <Spinner
+               android:id="@+id/spinner_move_mode"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="8dp"
+               android:entries="@array/move_mode"
+               android:prompt="@string/mode"
+               android:singleLine="true" />
+           <!-- 控制区 -> 设置 -> 第4列 控制模式下拉框 -->
+           <Spinner
+               android:id="@+id/spinner_control_mode"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="8dp"
+               android:entries="@array/control_mode"
+               android:prompt="@string/mode"
+               android:singleLine="true" />
+           <!-- 控制区 -> 设置 -> 第5列（零位移设置），因调试未稳定，暂时注释 -->
+<!-- 
+          <ToggleButton
+               android:id="@+id/button_zero_position_setting"
+		       android:layout_width="wrap_content"
+		       android:layout_height="wrap_content"
+		       android:textOn="@string/zero_position_setting"
+		       android:textOff="@string/position_setting"/>
+-->
+       </LinearLayout>
+       <!-- 控制区 -> 速度与转弯设置 -->
+       <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="50dp">
+           <TextView
+	        android:id="@+id/label_input_speed"
+	        android:layout_width="70dp"
+	        android:layout_height="wrap_content"
+	        android:text="@string/input_speed"/>
+	       <EditText
+		        android:id="@+id/editview_input_speed"
+		        android:layout_width="70dp"
+		        android:layout_height="wrap_content"
+		        android:inputType="number"
+		        android:text="@string/initial_zero"/>
+	        <TextView
+		        android:id="@+id/label_input_amount_of_turn"
+		        android:layout_marginLeft="20dp"
+		        android:layout_width="100dp"
+		        android:layout_height="wrap_content"
+		        android:text="@string/input_amount_of_turn"/>
+		   <EditText
+		        android:id="@+id/editview_input_amount_of_turn"
+		        android:layout_width="70dp"
+		        android:layout_height="wrap_content"
+		        android:inputType="number" 
+		        android:text="@string/initial_zero"/>
+        </LinearLayout>
+       <!-- 控制区 -> 速度杆与方向盘设置 -->
+       <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+	       <!-- 控制区 -> 速度杆与方向盘设置 -> 第一列（速度杆） -->
+	       <RelativeLayout android:layout_width="wrap_content" android:layout_height="match_parent">
+	        <!-- 控制区 -> 速度杆与方向盘设置 -> 第一列（速度杆）—> 最大值128 -->
+	        <TextView
+		        android:id="@+id/max"
+		        android:layout_width="wrap_content"
+		        android:layout_height="20dp"
+		        android:layout_marginLeft="10dp"
+		        android:text="@string/value_128" />
+		    <!-- 控制区 -> 速度杆与方向盘设置 ->  第一列（（速度杆）—> 速度杆 -->
+		    <com.jd.qbo.VerticalSeekBar
+		        android:id="@+id/verticalSeekBar"
+		        android:layout_width="wrap_content"
+		        android:layout_height="150dp"
+		        android:layout_marginLeft="10dp" 
+		        android:layout_below="@id/max" />
+		    <!-- 控制区 -> 速度杆与方向盘设置 ->  第一列（（速度杆）—> 最小值0 -->
+		    <TextView
+		        android:id="@+id/min"
+		        android:layout_width="wrap_content"
+		        android:layout_height="20dp"
+		        android:layout_marginLeft="15dp"
+		        android:layout_below="@id/verticalSeekBar"
+		        android:text="@string/value_0" />
+	        </RelativeLayout>
+	        <!-- 控制区 -> 速度杆与方向盘设置 -> 第二列（正常行走圆形方向盘） -->
+	       <com.jd.qbo.CircleSeekBar
+		        android:id="@+id/circleSeekBar"
+		        android:layout_width="250dp"
+		        android:layout_height="230dp"
+		        android:layout_marginLeft="50dp" 
+		        />
+	       <!-- 控制区 -> 速度杆与方向盘设置 -> 第二列（全向行走方向盘） -->
+	       <!-- start 方向盘 -->
+	       <LinearLayout 
+	        android:id="@+id/linearLayoutWheel"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="30dp"
+	        android:visibility="gone"
+	        android:orientation="vertical" >
+            <!-- 控制区 -> 速度杆与方向盘设置 -> 第二列（全向行走方向盘）-> 上半部 -> 左前、前、右前 -->
+		        <LinearLayout
+		            android:id="@+id/linearLayout2"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content" >
+		
+		            <ImageButton
+		                android:id="@+id/left_F"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:background="#00000000"
+		                android:src="@drawable/rf" />
+		
+		            <ImageButton
+		                android:id="@+id/forward"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:background="#00000000"
+		                android:src="@drawable/forward" />
+		
+		            <ImageButton
+		                android:id="@+id/right_F"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:background="#00000000"
+		                android:src="@drawable/rf" />
+		        </LinearLayout>
+			<!-- 控制区 -> 速度杆与方向盘设置 -> 第二列（全向行走方向盘）-> 中间部分-> 左、中、右 -->
+		        <LinearLayout
+		            android:id="@+id/linearLayout3"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content" >
+		
+		            <ImageButton
+		                android:id="@+id/left"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:background="#00000000"
+		                android:src="@drawable/left" />
+		
+		            <ImageButton
+		                android:id="@+id/middle"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:background="#00000000"
+		                android:src="@drawable/middle" />
+		
+		            <ImageButton
+		                android:id="@+id/right"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:background="#00000000"
+		                android:src="@drawable/right" />
+		        </LinearLayout>
+
+		        <!-- 控制区 -> 速度杆与方向盘设置 -> 第二列（全向行走方向盘）-> 下部分-> 左后、后、右后 -->
+		        <LinearLayout
+		            android:id="@+id/linearLayout4"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content" >
+		
+		            <ImageButton
+		                android:id="@+id/left_B"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:background="#00000000"
+		                android:src="@drawable/rf" />
+		
+		            <ImageButton
+		                android:id="@+id/back"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:background="#00000000"
+		                android:src="@drawable/back1" />
+		
+		            <ImageButton
+		                android:id="@+id/right_B"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:background="#00000000"
+		                android:src="@drawable/rf" />
+		        </LinearLayout>
+    	</LinearLayout>
+	       <!-- end 方向盘 -->
+       </LinearLayout>
+</LinearLayout>
+</LinearLayout>

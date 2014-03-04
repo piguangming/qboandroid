@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.jd.qbo"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <!-- 开通手机蓝牙，锁屏，WIFI权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- 设置SDK的最小支持与最佳支持版本，Android 4.0以上 -->
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="18" />
+
+    <!-- 设置应用的注册类，MainActivity为主页面，DeviceList为选择设备的弹出对话框。 -->
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme">
+        <!-- android:theme="@style/AppTheme" >-->
+        <!-- android:theme="@android:style/Theme.NoTitleBar" -->
+        <!-- 强制主页面竖屏  -->
+        <activity
+            android:name="com.jd.qbo.MainActivity"
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- 蓝牙设备选择为对话框  -->
+        <activity
+            android:name=".DeviceList"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/select_device"
+            android:theme="@android:style/Theme.Dialog" />
+    </application>
+
+</manifest>

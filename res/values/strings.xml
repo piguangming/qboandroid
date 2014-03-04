@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">QBO</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    
+     <string-array name="control_mode">    
+        <item>保护</item>
+        <item>自动</item>  
+        <item>休眠</item>    
+    </string-array>
+    
+     <string-array name="move_mode">    
+        <item>原地旋转</item>   
+        <item>正常行走</item>
+        <item>全向行走</item>    
+  <!--     <item>零位移点</item>     -->  
+    </string-array> 
+    
+    <!-- 状态区 -->
+    <string name="initial_zero">0</string>
+    <string name="value_0">0</string>
+    <string name="value_127">127</string>
+    <string name="value_128">128</string>
+    <string name="workarea_status">状态区</string>
+    <string name="connection_status">状态：</string>
+    <string name="connection_status_yes">已连接</string>
+    <string name="connection_status_no">未连接</string>
+    <string name="position_status_x">X：</string>
+    <string name="position_status_y">Y：</string>
+    <string name="position_status_angle">位移角度：</string>
+    <string name="position_realtime_angular_velocity">角速：</string>
+    <string name="position_realtime_linear_velocity">线速：</string>
+    <string name="amount_of_turn">转弯角度：</string>
+    <string name="distance_of_obstacle">障距：</string>
+    <string name="log_info_of_sensor">日志信息：</string>
+    <string name="counter">帧计数器：</string>
+    <string name="send_data">发送数据包：</string>
+    <string name="receive_data">接收数据包：</string>
+
+    <!-- 控制区 -->
+    <string name="bt_conn">连接</string>
+    <string name="bt_disconn">断开</string>
+    <string name="workarea_control">控制区</string>
+    <string name="zero_position_setting">设定零位移</string>
+    <string name="position_setting">不设定零位移</string>
+    <string name="mode">模式</string>
+    <string name="mode_auto">自动</string>
+    <string name="mode_sleep">休眠</string>
+    <string name="mode_protection">保护</string>
+    <string name="speed_control">速度控制</string>
+    <string name="custom">自定义</string>
+    <string name="input_speed">输入速度</string>
+    <string name="input_amount_of_turn">输入转弯角度</string>
+    <string name="full_angle_control">全向运动控制</string>
+    <string name="normal_control">正常运动控制</string>
+    
+     <string name="A">A</string>
+    <string name="B">B</string>
+    <string name="C">C</string>
+    <string name="D">D</string>
+    <string name="bt_not_available">蓝牙不可用</string>
+    <string name="bt_enable">抱歉，请去设置面板打开蓝牙开关</string>
+    <string name="connect_fail">Connect fail..</string>
+    <string name="connection_lost">Connection lost..</string>
+    <string name="bt_not_enable">Bluetooth fail..</string>
+    <string name="connecting">连接中...</string>
+    <string name="not_connected">未连接</string>
+    <string name="connected_to">已连接</string>
+    <string name="connect">未连接</string>
+    <string name="title_paired_devices">配对设备</string>
+    <string name="title_new_devices">New devices</string>
+    <string name="button_scan">扫描</string>
+    <string name="none_paired">none paired</string>
+    <string name="scanning">扫描中..</string>
+    <string name="none_found">Found nothing</string>
+    <string name="select_device">选择设备</string>
+    <string name="set_neutral">SET</string>
+    <string name="Speed">Speed:</string>
+    <string name="Direction">Direction:</string>
+    <string name="Gravity">Gravity:</string>
+    <string name="isout">Exit?</string>
+    <string name="yes">Yes.</string>
+    <string name="no">No..</string>
+    <string name="help">about</string>
+    <color name="white">#FFFFFF</color>
+    <string name="remoteOff">最新版本，不用升级</string>
+    <string name="remoteOn">有新版本，一键升级</string>
+</resources>
